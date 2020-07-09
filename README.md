@@ -44,22 +44,23 @@
  
  2) Ensure events are sent as list, even if its just one event : 
   - POST request at http://localhost:8080/event/AddEvent & send JSON data as :
-    [
-      {
-          "name": "meeting",
-          "date": "2020-10-10",
-          "start": "01:01:01",
-          "end": "02:01:01",
-          "user_id": 1
-      },
-      {
-          "name": "discussion",
-          "date": "2020-10-10",
-          "start": "03:01:01",
-          "end": "04:00:00",
-          "user_id": 1
-      }
-    ]
+    >
+    > [
+    >  {
+    >      "name": "meeting",
+    >      "date": "2020-10-10",
+    >      "start": "01:01:01",
+    >      "end": "02:01:01",
+    >      "user_id": 1
+    >  },
+    >  {
+    >      "name": "discussion",
+    >      "date": "2020-10-10",
+    >      "start": "03:01:01",
+    >      "end": "04:00:00",
+    >      "user_id": 1
+    >  }
+    >]
   
   3) Get the list of all events
    - GET request at http://localhost:8080/event/GetEventsByUser/1
