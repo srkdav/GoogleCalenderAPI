@@ -35,36 +35,36 @@
 
 ### Process to use the REST API
 1) Ensure a user is registered before going ahead.
- - POST request at http://localhost:8080/user/SetUser & send JSON data as : 
- > {
- >   "name" : "xyz"
- >   "email" :"xyz@gmail.com"
- > }
+  - POST request at http://localhost:8080/user/SetUser & send JSON data as : 
+   > {
+   >   "name" : "xyz"
+   >   "email" :"xyz@gmail.com"
+   > }
   - Ideally the id would be "1". Please ensure the id if multiple users are added.
  
  2) Ensure events are sent as list, even if its just one event : 
-  - POST request at http://localhost:8080/event/AddEvent & send JSON data as :
-    >
-    > [
-    >  {
-    >      "name": "meeting",
-    >      "date": "2020-10-10",
-    >      "start": "01:01:01",
-    >      "end": "02:01:01",
-    >      "user_id": 1
-    >  },
-    >  {
-    >      "name": "discussion",
-    >      "date": "2020-10-10",
-    >      "start": "03:01:01",
-    >      "end": "04:00:00",
-    >      "user_id": 1
-    >  }
-    >]
+   - POST request at http://localhost:8080/event/AddEvent & send JSON data as :
+     >
+     > [
+     >  {
+     >      "name": "meeting",
+     >      "date": "2020-10-10",
+     >      "start": "01:01:01",
+     >      "end": "02:01:01",
+     >      "user_id": 1
+     >  },
+     >  {
+     >      "name": "discussion",
+     >      "date": "2020-10-10",
+     >      "start": "03:01:01",
+     >      "end": "04:00:00",
+     >      "user_id": 1
+     >  }
+     >]
   
   3) Get the list of all events
-   - GET request at http://localhost:8080/event/GetEventsByUser/1
-   - Here /1 is the User ID.
+    - GET request at http://localhost:8080/event/GetEventsByUser/1
+    - Here /1 is the User ID.
 
 
                  
